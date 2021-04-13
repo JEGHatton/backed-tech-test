@@ -15,3 +15,9 @@ use Illuminate\Support\Facades\Route;
 | Please make BLOG & COMMENT CRUD ROUTES
 */
 
+Route::get('blog','BlogController@getPosts');
+Route::get('blog','BlogController@getPostsAndComments');
+Route::post('blog','BlogController@postComment');
+Route::put('blog','BlogController@putComment');
+Route::delete('blog','BlogController@deleteComment');
+
