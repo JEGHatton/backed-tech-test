@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('blog','BlogController@getPosts');
-Route::get('blog','BlogController@getPostsAndComments');
-Route::post('blog','BlogController@postComment');
-Route::put('blog','BlogController@putComment');
-Route::delete('blog','BlogController@deleteComment');
+Route::get('blog/{blog_id}','BlogController@getPostsAndComments');
+Route::post('blog/{blog_id}/{comments_id}','BlogController@createComment');
+Route::put('blog/edit','BlogController@editComment');
+Route::delete('blog/delete','BlogController@deleteComment');
 
