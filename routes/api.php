@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,4 @@ use Illuminate\Support\Facades\Route;
 | Please make BLOG & COMMENT CRUD ROUTES
 */
 
-Route::get('blog','BlogController@getPosts');
-Route::get('blog/{blog_id}','BlogController@getPostsAndComments');
-Route::post('blog/{blog_id}/{comments_id}','BlogController@createComment');
-Route::put('blog/edit','BlogController@editComment');
-Route::delete('blog/delete','BlogController@deleteComment');
-
+Route::resource('blogs', BlogController::class);
